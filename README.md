@@ -87,3 +87,10 @@ licensed MATLAB installation because the formal experiment uses the included
 MATLAB implementation. If MATLAB is unavailable or its license is not valid,
 use `--rcwa-mode dry-run` to verify the complete software flow, but do not report
 that run as a physical RCWA result.
+
+## License
+
+The original source code is licensed under the MIT License.
+See [LICENSE](LICENSE) for details.
+
+Third-party materials retain their original licenses.
