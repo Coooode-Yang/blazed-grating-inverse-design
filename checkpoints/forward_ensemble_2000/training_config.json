@@ -1,0 +1,73 @@
+{
+  "task": "forward_ensemble",
+  "dataset": {
+    "path": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\data\\dataset_2000.pt",
+    "sha256": "c3bc1d3900f1c120cae4aad665023cd3f0b08e952de2992f0a60955aacc484d8",
+    "num_samples": 2000,
+    "input_shape": [
+      2000,
+      5
+    ],
+    "output_shape": [
+      2000,
+      131
+    ],
+    "wavelength_start_nm": 400.0,
+    "wavelength_end_nm": 1700.0,
+    "wavelength_step_nm": 10.0,
+    "split_sizes": {
+      "train": 1600,
+      "val": 200,
+      "test": 200
+    },
+    "split_seed": 42
+  },
+  "runtime": {
+    "python_version": "3.11.5",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch_version": "2.3.0",
+    "numpy_version": "1.24.3",
+    "pandas_version": "2.0.3",
+    "cuda_available": false,
+    "cuda_device_count": 0
+  },
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "epochs": 400,
+  "batch_size": 32,
+  "num_threads": 2,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "loss": "MSE + 0.1*first_difference_MSE + 0.05*mean_efficiency_MSE",
+  "model_config": {
+    "input_dim": 5,
+    "output_dim": 131,
+    "hidden_dim": 256,
+    "num_blocks": 4,
+    "activation": "gelu",
+    "dropout": 0.0,
+    "use_layer_norm": true,
+    "output_activation": "sigmoid"
+  },
+  "members": [
+    {
+      "seed": 11,
+      "checkpoint": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_11\\best_forward.pt",
+      "best_val_loss": 0.00017177533300127834
+    },
+    {
+      "seed": 22,
+      "checkpoint": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_22\\best_forward.pt",
+      "best_val_loss": 0.00017289810057263821
+    },
+    {
+      "seed": 33,
+      "checkpoint": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_33\\best_forward.pt",
+      "best_val_loss": 0.00018733124306891114
+    }
+  ]
+}

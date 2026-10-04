@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-07-21T05:07:20.989267+00:00",
+  "model": "Rakić 1998 Brendel-Bormann model for Al",
+  "model_doi": "10.1364/AO.37.005271",
+  "database_page": "https://refractiveindex.info/?shelf=main&book=Al&page=Rakic-BB",
+  "source_table_url": "https://refractiveindex.info/tmp/database/data/main/Al/nk/Rakic-BB.txt",
+  "reference_script_url": "https://github.com/polyanskiy/refractiveindex.info-scripts/blob/main/scripts/Rakic%201998%20-%20Al%20%28BB%20model%29.py",
+  "source_table_sha256": "2fa60efd6a682d465de1c3ea387761000314054c1b056f4397fb47de97629a1e",
+  "source_points": 200,
+  "source_validation_max_abs_n": 0.008591112057274586,
+  "source_validation_max_abs_k": 0.008509564342602971,
+  "source_validation_400_1700nm_max_abs_n": 8.190270332986138e-05,
+  "source_validation_400_1700nm_max_abs_k": 0.0007952015746184316,
+  "output_sha256": "7cc0c92c89bd4b8ccdf38f6b88979aba9151317fd0bb0a1aa3fa47a63e81be0e",
+  "output_points": 131,
+  "output_wavelength_start_nm": 400.0,
+  "output_wavelength_end_nm": 1700.0,
+  "output_wavelength_step_nm": 10.0,
+  "complex_index_convention": "n_complex = n - i*k in MATLAB RCWA solver"
+}

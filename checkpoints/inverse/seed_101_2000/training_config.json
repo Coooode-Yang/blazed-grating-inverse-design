@@ -1,0 +1,67 @@
+{
+  "task": "multi_candidate_inverse",
+  "dataset": {
+    "path": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\data\\dataset_2000.pt",
+    "sha256": "c3bc1d3900f1c120cae4aad665023cd3f0b08e952de2992f0a60955aacc484d8",
+    "num_samples": 2000,
+    "input_shape": [
+      2000,
+      5
+    ],
+    "output_shape": [
+      2000,
+      131
+    ],
+    "wavelength_start_nm": 400.0,
+    "wavelength_end_nm": 1700.0,
+    "wavelength_step_nm": 10.0,
+    "split_sizes": {
+      "train": 1600,
+      "val": 200,
+      "test": 200
+    },
+    "split_seed": 42
+  },
+  "forward_ensemble": [
+    {
+      "path": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_11\\best_forward.pt",
+      "sha256": "f49efa3ba6eacc68a2fbd5b227c9bad9b53f35379ecd64a7184133f55723bdb4"
+    },
+    {
+      "path": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_22\\best_forward.pt",
+      "sha256": "c813a0828abff4c70285b25f782c6b3eb8be7cb4284a1743ce1a1044d35a5e50"
+    },
+    {
+      "path": "E:\\GYs\\分区闪耀光栅逆向设计\\论文\\Final_Project_clear\\checkpoints\\forward_ensemble_2000\\member_seed_33\\best_forward.pt",
+      "sha256": "4ef154d6e2078022963e1edb59306b6b2e4a6ef7ec85abc409731d03c8e6284e"
+    }
+  ],
+  "runtime": {
+    "python_version": "3.11.5",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch_version": "2.3.0",
+    "numpy_version": "1.24.3",
+    "pandas_version": "2.0.3",
+    "cuda_available": false,
+    "cuda_device_count": 0
+  },
+  "seed": 101,
+  "epochs": 400,
+  "batch_size": 64,
+  "num_threads": 2,
+  "device": "cpu",
+  "optimizer": "AdamW",
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "gradient_clip_norm": 1.0,
+  "loss": "best_candidate + 0.1*candidate_average - 0.002*candidate_diversity",
+  "model_config": {
+    "spectrum_dim": 131,
+    "hidden_dim": 256,
+    "num_blocks": 4,
+    "dropout": 0.0,
+    "num_candidates": 4
+  },
+  "best_epoch": 166,
+  "best_val_loss": 0.0003107976517640054
+}
